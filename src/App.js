@@ -1,12 +1,12 @@
 import React from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
-import DataLoader from './components/DataLoader';
+import CryptoDashboard from './components/CryptoDashboard'; // Import the CryptoDashboard component
 
 function App() {
   return (
     <div className="App">
       <ErrorBoundary>
-        <DataLoader />
+        <CryptoDashboard /> {/* Render the CryptoDashboard component */}
       </ErrorBoundary>
     </div>
   );
