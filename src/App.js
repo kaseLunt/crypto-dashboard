@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import ErrorBoundary from './components/ErrorBoundary';
 import CryptoDashboard from './components/CryptoDashboard'; // Import the CryptoDashboard component
 

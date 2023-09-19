@@ -1,28 +1,28 @@
-// Search.js
 import React, { useState } from 'react';
+import '../App.css';
 
 function Search({ onAssetSelected }) {
-  const [inputValue, setInputValue] = useState(''); // State to store user input
+  const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (event) => {
-    setInputValue(event.target.value); // Update the input value as the user types
+    setInputValue(event.target.value);
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the form from submitting and refreshing the page
-    onAssetSelected(inputValue); // Pass the user input to the parent component
+    event.preventDefault();
+    onAssetSelected(inputValue);
   };
 
   return (
-    <div>
+    <div className="search-form">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="asset">Enter an Asset ID:</label>
+        <label htmlFor="asset">Token: </label>
         <input
           type="text"
           id="asset"
           value={inputValue}
           onChange={handleInputChange}
-          placeholder="e.g., bitcoin"
+          placeholder="e.g., bitcoin, btc, usd"
         />
         <button type="submit">Show Chart</button>
       </form>
